@@ -110,7 +110,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 className="w-12 h-12 rounded-full"
               />
               <div>
-                <p className="font-medium">GamerPro</p>
+                <p className="font-medium">EvoSays</p>
                 <p className="text-sm text-muted-foreground">
                   {filteredStreamsCount} записей
                 </p>
