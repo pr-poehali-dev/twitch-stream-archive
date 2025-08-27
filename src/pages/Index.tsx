@@ -242,6 +242,7 @@ const Index = () => {
             <ChatReplay
               currentChatMessages={currentChatMessages}
               videoCurrentTime={videoCurrentTime}
+              onTimestampClick={handleTimeChange}
             />
           </div>
         </div>

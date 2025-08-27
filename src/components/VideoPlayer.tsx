@@ -53,7 +53,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         Назад к архиву
       </Button>
       
-      <div className="video-player mb-6 relative group aspect-video bg-black rounded-lg overflow-hidden">
+      <div className="video-player mb-6 relative group aspect-video bg-black rounded-lg overflow-hidden border border-border">
         <img
           src={selectedStream.thumbnail}
           alt={selectedStream.title}

@@ -6,48 +6,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 229 17% 11%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 9%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 259 76% 56%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 7% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 7% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 240 7% 15%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 240 7% 15%;
+    --input: 240 7% 15%;
     --ring: 259 76% 56%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 240 10% 9%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 259 76% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 7% 15%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 7% 15%;
+    --sidebar-ring: 259 76% 56%;
 
     --twitch-purple: 259 76% 56%;
     --twitch-dark: 229 17% 11%;
     --twitch-light: 0 0% 92%;
+    --twitch-chat-bg: 240 10% 9%;
+    --twitch-chat-border: 240 7% 15%;
   }
 
   .dark {
@@ -105,8 +107,24 @@
     @apply bg-card rounded-lg overflow-hidden shadow-sm border hover:shadow-md transition-all duration-300 hover:scale-105;
   }
 
-  .chat-bubble {
-    @apply bg-muted rounded-lg p-2 mb-2 text-sm transition-opacity duration-200;
+  .twitch-chat {
+    @apply bg-card border border-border rounded-lg;
+  }
+
+  .twitch-chat-message {
+    @apply px-3 py-1.5 hover:bg-muted/30 transition-colors duration-150 cursor-default text-sm leading-relaxed;
+  }
+
+  .twitch-chat-username {
+    @apply font-semibold cursor-pointer hover:underline;
+  }
+
+  .twitch-chat-timestamp {
+    @apply text-xs text-muted-foreground cursor-pointer hover:text-primary transition-colors duration-200;
+  }
+
+  .twitch-chat-message-text {
+    @apply break-words;
   }
 
   .video-player {
